@@ -10,6 +10,7 @@ It uses [confidence](https://github.com/spumko/confidence), with all it niceties
 configuration example
 ---------------------
 
+```
 {
     "key1": "value",
     "key2": {
@@ -22,21 +23,26 @@ configuration example
         }
     }
 }
+```
 
-*GET /
+**GET /**
 
+```
 {
     "key1": "value",
     "key2": {
         "limit": 10
     }
 }
+```
 
-*GET /key2?env=production*
+**GET /key2?env=production**
 
+```
 {
     "limit": 200
 }
+```
 
 install & run
 -------------
