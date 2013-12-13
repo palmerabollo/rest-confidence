@@ -1,0 +1,23 @@
+{
+  "name": "rest-confidence",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/palmerabollo/rest-confidence"
+  },
+  "author": "Guido García <guido.garcia.bernardo@gmail.com> (http://guidogarcia.net)",
+  "version": "0.2.0",
+  "engines": {
+    "node": ">= 0.10.x"
+  },
+  "keywords": [
+    "configuration",
+    "server",
+    "api"
+  ],
+  "dependencies": {
+    "hapi": "*",
+    "confidence": "~0.10.0",
+    "alce": "~1.0.0",
+    "winston": "~0.7.2"
+  }
+}

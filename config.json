@@ -1,0 +1,12 @@
+{
+    "key1": "value",
+    "key2": {
+        "$filter": "env",
+        "production": {
+            "limit": 200
+        },
+        "$default": {
+            "limit": 10
+        }
+    }
+}
