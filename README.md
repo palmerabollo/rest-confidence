@@ -54,8 +54,7 @@ Install & run
 TODO
 ----
 
-- Live reload when configuration changes
-- ETag support
+- ETag support / Last-Modified header
 - Node.js client
 
 License

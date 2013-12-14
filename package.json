@@ -18,6 +18,7 @@
     "hapi": "*",
     "confidence": "~0.10.0",
     "alce": "~1.0.0",
-    "winston": "~0.7.2"
+    "winston": "~0.7.2",
+    "watchr": "~2.4.4"
   }
 }
