@@ -2,24 +2,17 @@ var Hapi = require('hapi'),
     Confidence = require('confidence'),
     ALCE = require('ALCE'),
     fs = require('fs'),
-    logger = require('winston'),
-    watchr = require('watchr');
+    logger = require('winston');
 
 var CONFIG_FILE = __dirname + '/config.json';
 var store = new Confidence.Store();
 
-watchr.watch({
-    path: CONFIG_FILE,
-    listener: {
-        change: loadConfiguration
-    },
-    next: init
-});
+fs.watch(CONFIG_FILE, loadConfiguration);
 
-function init() {
+(function init() {
     loadConfiguration();
     startServer();    
-}
+})();
 
 function loadConfiguration() {
     var src = fs.readFileSync(CONFIG_FILE);
@@ -29,7 +22,7 @@ function loadConfiguration() {
 };
 
 function startServer() {
-    var server = Hapi.createServer('localhost', 8000, {cors: true});
+    var server = Hapi.createServer('localhost', process.env.port || 8000, {cors: true});
 
     var hanldeConfigurationRequest = function(req) {
         logger.info('property %s, filters', req.path, req.query);
