@@ -44,12 +44,19 @@ configuration example
 }
 ```
 
-install & run
+Install & run
 -------------
 
 - git clone the project
 - npm install
 - npm start
+
+TODO
+----
+
+- Live reload when configuration changes
+- ETag support
+- Node.js client
 
 License
 -------
