@@ -55,6 +55,8 @@ TODO
 ----
 
 - Node.js client
+- Multiple configuration files / modules
+- Managment capabilities: PUT / POST methods
 
 License
 -------
