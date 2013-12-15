@@ -6,7 +6,7 @@
             "limit": 200
         },
         "$default": {
-            "limit": 10
+            "limit": 12
         }
     }
 }

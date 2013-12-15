@@ -1,8 +1,8 @@
-var Hapi = require('hapi'),
+var fs = require('fs'),
+    crypto = require('crypto'),
+    Hapi = require('hapi'),
     Confidence = require('confidence'),
     ALCE = require('ALCE'),
-    fs = require('fs'),
-    crypto = require('crypto'),
     logger = require('winston');
 
 var CONFIG_FILE = __dirname + '/config.json';
@@ -23,11 +23,11 @@ function initializeConfiguration() {
     logger.info('Configuration file loaded', CONFIG_FILE);
 
     loadFileStatistics();
-};
+}
 
 function loadFileStatistics() {
     fileStats = fs.statSync(CONFIG_FILE);
-    fileStats.etag = crypto.createHash('md5').update(fileStats.mtime.toString()).digest('hex');
+    fileStats.etag = crypto.createHash('md5').update(fileStats.mtime.toGMTString()).digest('hex');
     logger.info('Configuration file stats', fileStats);
 }
 
@@ -44,7 +44,7 @@ function startServer() {
             this.reply('Not modified').code(304);
         } else {
             this.reply(store.get(req.path, req.query))
-                .header('Last-Modified', fileStats.mtime)
+                .header('Last-Modified', fileStats.mtime.toGMTString())
                 .header('ETag', fileStats.etag);
         }
     };
