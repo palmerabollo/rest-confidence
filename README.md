@@ -54,7 +54,6 @@ Install & run
 TODO
 ----
 
-- ETag support / Last-Modified header
 - Node.js client
 
 License
