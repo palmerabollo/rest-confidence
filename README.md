@@ -3,11 +3,11 @@ rest-confidence
 
 This is a uber-simple but powerful configuration server.
 
-Tired of configuring many components in many different environments? rest-confidence helps you centralize your configuration and expose it as a REST service. Go home early.
+Tired of configuring many components in many different environments? rest-confidence helps you centralize your configuration and expose it as a REST service. You can easily use it as a service directory.
 
 It uses [confidence](https://github.com/spumko/confidence), with all it niceties now remotelly accesible using a simple REST service.
 
-configuration example
+Configuration example
 ---------------------
 
 ```
