@@ -1,11 +1,12 @@
 {
   "name": "rest-confidence",
+  "description": "This is a uber-simple but powerful configuration server",
   "repository": {
     "type": "git",
     "url": "git://github.com/palmerabollo/rest-confidence"
   },
   "author": "Guido García <guido.garcia.bernardo@gmail.com> (http://guidogarcia.net)",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "engines": {
     "node": ">= 0.10.x"
   },

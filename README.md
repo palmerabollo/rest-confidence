@@ -1,9 +1,11 @@
 rest-confidence
 ===============
 
-This is a uber-simple but powerful configuration server.
+This is a uber-simple yet powerful-enough configuration server.
 
-Tired of configuring many components in many different environments? rest-confidence helps you centralize your configuration and expose it as a REST service. You can easily use it as a service directory.
+Tired of configuring many components in many different environments? rest-confidence helps you centralize your configuration and expose it as a REST service.
+
+Other use cases include using it as a service directory or as a foundation for A/B testing. 
 
 It uses [confidence](https://github.com/spumko/confidence), with all it niceties now remotelly accesible using a simple REST service.
 
@@ -51,11 +53,15 @@ Install & run
 - npm install
 - npm start
 
+Clients
+-------
+
+- node.js: [rest-confidence-client](https://github.com/palmerabollo/rest-confidence-client)
+
 TODO
 ----
 
-- Node.js client
-- Multiple configuration files / modules
+- Allow multiple configuration files / modules
 - Managment capabilities: PUT / POST methods
 
 License

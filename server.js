@@ -1,3 +1,5 @@
+'use strict';
+
 var fs = require('fs'),
     crypto = require('crypto'),
     Hapi = require('hapi'),
