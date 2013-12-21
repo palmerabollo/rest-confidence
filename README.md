@@ -53,6 +53,8 @@ Install & run
 - npm install
 - npm start
 
+It runs on port 8000 by default. You can override it defining a PORT environment variable.
+
 Clients
 -------
 
