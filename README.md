@@ -61,8 +61,11 @@ Clients
 TODO
 ----
 
-- Allow multiple configuration files / modules
-- Managment capabilities: PUT / POST methods
+- Allow multiple configuration files / modules.
+- Managment capabilities: PUT / POST methods.
+- Python and Java clients.
+- Send broadcast datagrams to make itself visible to the clients.
+- Simple web UI (low priority)
 
 License
 -------
