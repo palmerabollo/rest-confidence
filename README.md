@@ -1,13 +1,9 @@
 rest-confidence
 ===============
 
-This is a uber-simple yet powerful-enough configuration server.
+This is a simple yet powerful **configuration server**. Tired of configuring many components in many different environments? Rest-confidence centralizes your settings and exposes them as a REST service.
 
-Tired of configuring many components in many different environments? rest-confidence helps you centralize your configuration and expose it as a REST service.
-
-Other use cases include using it as a service directory or as a foundation for A/B testing. 
-
-It uses [confidence](https://github.com/spumko/confidence), with all it niceties now remotelly accesible using a simple REST service.
+Other use cases include using it as a service directory or as a foundation for A/B testing ([read more](http://guidogarcia.net/blog/2014/01/02/a-rest-configuration-server/)). It uses [confidence](https://github.com/spumko/confidence), with all it niceties now remotelly accesible through a simple REST service.
 
 Configuration example
 ---------------------
@@ -38,6 +34,14 @@ Configuration example
 }
 ```
 
+**GET /key2**
+
+```
+{
+    "limit": 10
+}
+```
+
 **GET /key2?env=production**
 
 ```
@@ -49,7 +53,8 @@ Configuration example
 Install & run
 -------------
 
-- git clone the project
+- git clone https://github.com/palmerabollo/rest-confidence.git
+- cd rest-confidence
 - npm install
 - npm start
 
@@ -63,10 +68,11 @@ Clients
 TODO
 ----
 
-- Allow multiple configuration files / modules.
-- Managment capabilities: PUT / POST methods.
-- Python and Java clients.
-- Send broadcast datagrams to make itself visible to the clients.
+- Allow multiple configuration files / modules
+- Python client (contrigutions are welcome)
+- Java client
+- Send broadcast datagrams to make itself visible to the clients (under evaluation)
+- Managment capabilities: PUT / POST methods (low priority)
 - Simple web UI (low priority)
 
 License
