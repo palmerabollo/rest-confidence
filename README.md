@@ -72,6 +72,7 @@ TODO
 - Python client (contrigutions are welcome)
 - Java client
 - Send broadcast datagrams to make itself visible to the clients (under evaluation)
+- Allow clients to subscribe and get notifications when a file/path changes.
 - Managment capabilities: PUT / POST methods (low priority)
 - Simple web UI (low priority)
 - Multitenant (very low priority, under evaluation)
