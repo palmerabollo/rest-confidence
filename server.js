@@ -35,7 +35,7 @@ function loadFileStatistics() {
 
 function startServer() {
     var port = process.env.PORT ? parseInt(process.env.PORT) : 8000;
-    var server = Hapi.createServer('localhost', port, {cors: true});
+    var server = Hapi.createServer(port, {cors: true});
 
     var handleConfigurationRequest = function(req) {
         logger.info('Property %s, filters', req.path, req.query);
