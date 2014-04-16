@@ -4,7 +4,7 @@ var fs = require('fs'),
     crypto = require('crypto'),
     Hapi = require('hapi'),
     Confidence = require('confidence'),
-    ALCE = require('ALCE'),
+    ALCE = require('alce'),
     logger = require('winston');
 
 var CONFIG_FILE = __dirname + '/config.json';
