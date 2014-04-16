@@ -74,6 +74,7 @@ TODO
 - Send broadcast datagrams to make itself visible to the clients (under evaluation)
 - Managment capabilities: PUT / POST methods (low priority)
 - Simple web UI (low priority)
+- Multitenant (very low priority, under evaluation)
 
 License
 -------
