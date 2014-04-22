@@ -8,5 +8,8 @@
         "$default": {
             "limit": 12
         }
+    },
+    "$meta": {
+        "anykey": "anyvalue" // comments are also fine
     }
 }

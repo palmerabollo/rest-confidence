@@ -19,6 +19,9 @@ Configuration example
         "$default": {
             "limit": 10
         }
+    },
+    "$meta": {
+        "anykey": "anyvalue" // comments are also fine
     }
 }
 ```
