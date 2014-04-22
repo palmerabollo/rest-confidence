@@ -50,6 +50,10 @@ Configuration example
 }
 ```
 
+**GET /__raw**
+
+Gets the raw configuration file contents.
+
 Install & run
 -------------
 

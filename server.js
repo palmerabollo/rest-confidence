@@ -13,7 +13,7 @@ var fileStats = {};
 
 (function init() {
     initializeConfiguration();
-    startServer();    
+    startServer();
 })();
 
 fs.watch(CONFIG_FILE, initializeConfiguration);
@@ -37,7 +37,7 @@ function startServer() {
     var port = process.env.PORT ? parseInt(process.env.PORT) : 8000;
     var server = Hapi.createServer(port, {cors: true});
 
-    var handleConfigurationRequest = function(req) {
+    var handleConfigurationRequest = function (req) {
         logger.info('Property %s, filters', req.path, req.query);
 
         var modified = handleETag(req);
@@ -51,7 +51,11 @@ function startServer() {
         }
     };
 
-    var handleETag = function(req) {
+    var handleRawConfigurationRequest = function (req) {
+        this.reply(store._tree).code(200);
+    };
+
+    var handleETag = function (req) {
         var ifNoneMatch = req.headers['if-none-match'];
         var ifModifiedSince = req.headers['if-modified-since'];
 
@@ -65,7 +69,7 @@ function startServer() {
                 return true;
             }
         }
-        
+
         return false;
     };
 
@@ -73,6 +77,12 @@ function startServer() {
         method: 'GET',
         path: '/{p*}',
         handler: handleConfigurationRequest
+    });
+
+    server.route({
+        method: 'GET',
+        path: '/__raw',
+        handler: handleRawConfigurationRequest
     });
 
     server.start(function () {
