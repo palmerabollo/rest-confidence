@@ -71,12 +71,12 @@ Clients
 -------
 
 - node.js: [rest-confidence-client](https://github.com/palmerabollo/rest-confidence-client)
+- python: [rest-confidence-client-python](https://github.com/palmerabollo/rest-confidence-client-python) (contributions are welcome)
 
 TODO
 ----
 
 - Allow multiple configuration files / modules
-- Python client (contrigutions are welcome)
 - Java client
 - Send broadcast datagrams to make itself visible to the clients (under evaluation)
 - Allow clients to subscribe and get notifications when a file/path changes.
