@@ -6,7 +6,7 @@
         "$filter": "country",
         "ES": "http://myservice-production.es",
         "UK": "http://myservice-production.co.uk"
-      },
+      }
     },
     "development": {
       "url": "http://myservice-production.com"
@@ -29,7 +29,7 @@
       { "limit": 20, "value": "green" }
     ],
     "$default": "blue"
-  }
+  },
   "$meta": {
     "anykey": "anyvalue" // comments are also fine
   }
