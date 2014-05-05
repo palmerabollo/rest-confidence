@@ -1,15 +1,36 @@
 {
-    "key1": "value",
-    "key2": {
-        "$filter": "env",
-        "production": {
-            "limit": 200
-        },
-        "$default": {
-            "limit": 12
-        }
+  "myservice": {
+    "$filter": "env",
+    "production": {
+      "url": {
+        "$filter": "country",
+        "ES": "http://myservice-production.es",
+        "UK": "http://myservice-production.co.uk"
+      }
     },
-    "$meta": {
-        "anykey": "anyvalue" // comments are also fine
+    "development": {
+      "url": "http://myservice-production.com"
     }
+  },
+  "key1": "value",
+  "key2": {
+    "$filter": "env",
+    "production": {
+      "limit": 200
+    },
+    "$default": {
+      "limit": 12
+    }
+  },
+  "color": {
+    "$filter": "random",
+    "$range": [
+      { "limit": 10, "value": "red" },
+      { "limit": 20, "value": "green" }
+    ],
+    "$default": "blue"
+  },
+  "$meta": {
+    "anykey": "anyvalue" // comments are also fine
+  }
 }
