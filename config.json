@@ -9,19 +9,19 @@
       },
     },
     "development": {
-      "url": "http://myservice-production.com" 
+      "url": "http://myservice-production.com"
     }
   },
-    "key1": "value",
-    "key2": {
-        "$filter": "env",
-        "production": {
-            "limit": 200
-        },
-        "$default": {
-            "limit": 12
-        }
+  "key1": "value",
+  "key2": {
+    "$filter": "env",
+    "production": {
+      "limit": 200
     },
+    "$default": {
+      "limit": 12
+    }
+  },
   "color": {
     "$filter": "random",
     "$range": [
@@ -29,5 +29,8 @@
       { "limit": 20, "value": "green" }
     ],
     "$default": "blue"
+  }
+  "$meta": {
+    "anykey": "anyvalue" // comments are also fine
   }
 }
