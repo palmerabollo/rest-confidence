@@ -6,9 +6,12 @@
     "url": "git://github.com/palmerabollo/rest-confidence"
   },
   "author": "Guido García <guido.garcia.bernardo@gmail.com> (http://guidogarcia.net)",
-  "version": "0.2.4",
+  "version": "0.2.12",
   "engines": {
     "node": ">= 0.10.x"
+  },
+  "bin": {
+    "rest-confidence": "./bin/rest-confidence"
   },
   "keywords": [
     "configuration",
