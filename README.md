@@ -57,15 +57,15 @@ Configuration example
 
 Gets the raw configuration file contents.
 
-Install & run
--------------
+Install & run the server
+------------------------
 
-- git clone https://github.com/palmerabollo/rest-confidence.git
-- cd rest-confidence
-- npm install
-- npm start
+```
+npm install -g rest-confidence
+rest-confidence <path-to-your-config-json>
+```
 
-It runs on port 8000 by default. You can override it defining a PORT environment variable.
+It runs on **port 8000** by default. You can override it defining a PORT environment variable (e.g. ```PORT=8000 rest-confidence```).
 
 Clients
 -------
